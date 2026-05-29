@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy-950: #050d18;
+    --navy-900: #0a1628;
+    --accent: #3d8fd9;
+    --accent-bright: #5eb0f5;
+    --accent-muted: #7eb8e8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-[#050d18] text-white;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif), "Times New Roman", serif;
+  }
+
+  .font-sans {
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+}
